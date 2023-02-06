@@ -1,0 +1,119 @@
+.share_contents {
+  margin-bottom: 37px;
+  width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#tmplist {
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+  width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+#tmplist .item {
+  width: 310px;
+  height: 445px;
+  border-left: 3px solid #2772db;
+  margin-bottom: 60px;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+}
+
+#tmplist .item > a {
+  text-decoration: none;
+  color: #282937;
+}
+
+#tmplist .item_on::before {
+  content: "";
+  width: 310px;
+  height: 445px;
+  background-color: #2772db;
+  position: absolute;
+  transform: translateX(-310px);
+  transition: all 0.5s ease-in;
+  z-index: -1;
+}
+
+#tmplist .item_off::before {
+  content: "Template is coming soon";
+  width: 310px;
+  height: 445px;
+  background-color: rgb(177, 171, 171);
+  position: absolute;
+  transform: translateX(-310px);
+  transition: all 0.5s ease-in;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(../IMG/LOGO/LSxTF.gif);
+  background-size: 270px 120px;
+  background-repeat: no-repeat;
+  background-position: top;
+  background-position-y: 50px;
+}
+
+#tmplist .item_on:hover::before {
+  transform: translateX(0px);
+  opacity: 0.3;
+}
+
+#tmplist .item_off:hover::before {
+  transform: translateX(0px);
+}
+
+#tmplist .item > a > .imgbox {
+  width: 280px;
+  height: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 21px;
+}
+
+#tmplist .item > a > .imgbox > img {
+  width: 100%;
+  height: 100%;
+}
+
+.innerbox {
+  width: 270px;
+  height: 180px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 12px;
+}
+
+.innerbox_title {
+  width: 95px;
+  font-size: 13px;
+  text-align: left;
+  vertical-align: top;
+}
+.innerbox_content {
+  width: 180px;
+  font-size: 13px;
+  word-break: break-all;
+  vertical-align: top;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.pallet {
+  padding: 0px;
+  margin-left: 5px;
+  width: 15px;
+  height: 15px;
+}
+
+.innerbox_content > span {
+  padding-left: 5px;
+  padding-bottom: 2px;
+}
